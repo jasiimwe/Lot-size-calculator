@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Lotsize_calculator"
+             x:Class="Lotsize_calculator.MainPage"
+             Title="Lot Size Calculator">
+
+    <StackLayout Margin="10">
+        <Grid x:Name="inputs">
+            <StackLayout>
+                <Label Text="Inputs" FontSize="20" Margin="10" TextColor="Brown"/>
+                <Label Text="Account Size (units of your currency):"/>
+                <Entry x:Name="acc_size" Placeholder=""  />
+                <Label Text="Percentage At Risk Per Trade (e.g. 1% = 1):"/>
+                <Entry x:Name="percentange_risk" Placeholder=""  />
+                <Label Text="Stop Loss Size (Pips/Points):"/>
+                <Entry x:Name="stop_loss" Placeholder=""  />
+                <Button x:Name="process_inputs" Text="Submit"
+                        Clicked="Process_inputs_Clicked" 
+                        BackgroundColor="Brown" TextColor="White"/>
+            </StackLayout>
+        </Grid>
+        
+        <Grid x:Name="result">
+            <StackLayout>
+                <Label Text="Outputs" FontSize="20" Margin="10" TextColor="Brown"/>
+                <Label Text="Per Point Value (units of your currency):"/>
+                <Entry x:Name="lot_size" Placeholder=""  />
+                
+            </StackLayout>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
